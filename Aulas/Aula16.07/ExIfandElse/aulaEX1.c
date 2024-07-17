@@ -8,7 +8,7 @@ int main(){
    scanf("%lf", &x);
 
    printf("insira o valor de y:");
-   scanf("%lf", &x);
+   scanf("%lf", &y);
 
    if (x > y){
     printf("maior valor é:%lf\n", x );
