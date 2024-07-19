@@ -15,11 +15,13 @@ int main(){
 
     int media = (nota1+ nota2 + nota3)/3;
 
-    printf("Sua media aritmetica foi: ", media);
+    printf("Sua media aritmetica foi: %d\n", media);
 
     if(media >= 7){
         printf("ALUNO APROVADO");
-    } else{
+    } else if(media >= 5 && media < 7){
+        printf("ALUNO EM RECUPERÇÃO");
+    } else {
         printf("ALUNO REPROVADO");
     }
 return 0;
