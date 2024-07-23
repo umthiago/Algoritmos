@@ -1,0 +1,45 @@
+#include <stdio.h> 
+
+int main(){ 
+    char conceito;
+    printf("Conceito | Significado \n");
+    printf("A | Excelente \n");
+    printf("B | Ótimo \n");
+    printf("C | Bom \n");
+    printf("D | Regular \n");
+    printf("E | Ruim \n");
+    printf("F | Insuficiente\n");
+    printf("Digite o conceito do seu aluno");
+    scanf("%c", &conceito);
+    switch(conceito){
+        case 'A':
+            printf("Um aluno Excelente");
+            break;
+        case 'B':
+            printf("Um aluno Ótimo");
+            break;
+        case 'C':
+            printf("Um aluno Bom");
+            break;
+        case 'D':
+            printf("Um aluno Regular");
+            break;
+        case 'E':
+            printf("Um aluno Ruim");
+            break;
+        case 'F':
+            printf("Nos vemos novamente ano que vem");
+            break;
+        default:
+            printf("Valor indisponivel");
+    }
+    
+
+
+
+
+
+
+return 0; 
+
+} 
