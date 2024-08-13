@@ -2,24 +2,19 @@
 #include <stdlib.h>
 
 int main() {
-  double joao = 0;
-  double jose = 0;
- 
+    double jose = 1.1;
+    double joao = 1.7;
+    int aux = 0;
 
+    while(jose <= joao){
+        jose = jose + 0.03;
+        joao = joao + 0.02;
 
-  
-  while ( jose < ){
-    printf("%d\n", valor);
-
-    valor = valor - 5;
-    
-    
-    if(valor == 5){
-      valor = 0;
-      printf("%d\n", valor);
+        aux++;
     }
-    aux = valor;
-  }
-  
+
+    printf("Será necessário %d anos, para que José seja maior que João\n", aux);
+
+    return 0;
   return 0;
 }
