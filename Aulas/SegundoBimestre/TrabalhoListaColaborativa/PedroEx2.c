@@ -1,20 +1,25 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    int valor = 0;
+    double valor = 0;
     char nacionalidade[20];
 
     printf("Insira o valor da sua compra: ");
-    scanf("%d", &valor);
+    scanf("%lf", &valor);
     printf("Insira se a compra é Internacional ou Nacional: ");
-    scanf("%c", nacionalidade);
+    scanf("%s", nacionalidade);
 
-    if (nacionalidade == "Internacional" || nacionalidade == "internacional"){
-        
+    if (strcmp(nacionalidade, "Internacional") == 0){
+        double valor_final = valor + (valor * 0.30);
+        printf("O valor da sua compra é: %.2lf", valor_final);
+    } else{
+        double valor_final = valor + (valor * 0.15);
+        printf("O valor da sua compra é: %.2lf", valor_final);
     }
 
-    
 
-   
+
+
     return 0;
 }
