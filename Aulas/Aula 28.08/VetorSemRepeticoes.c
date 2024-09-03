@@ -17,8 +17,6 @@ int main() {
                 num--;
             }
 
-
-
         }
         printf("%d ", vetorInteiros[i]);
         aux = vetorInteiros[i];
