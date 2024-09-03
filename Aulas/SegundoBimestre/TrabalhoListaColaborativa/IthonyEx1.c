@@ -1,11 +1,14 @@
 #include <stdio.h>
-#include <math.h>
 #include <string.h>
 
-
 int main() {
-    char letraromana[5]; 
-    int numromano[5];
+    char letraromana[100]; 
+    int numromano[100]; 
+    int soma = 0; 
+   
+    int anterior = 0; 
+
+ 
     int I = 1;
     int V = 5;
     int X = 10;
@@ -17,15 +20,9 @@ int main() {
     printf("Insira um número romano: ");
     scanf("%s", letraromana);
 
-    printf("%s\n", letraromana);
-    
 
-    
-    
-
-    for (int i = 0; i < strlen(letraromana); i++){
-        printf("%c\n", letraromana[i]);
-        switch (letraromana[i]){
+    for (int i = 0; i < strlen(letraromana); i++) {
+        switch (letraromana[i]) {
             case 'I':
                 numromano[i] = I;
                 break;
@@ -36,7 +33,7 @@ int main() {
                 numromano[i] = X;
                 break;
             case 'L':
-                numromano[i] = L;   
+                numromano[i] = L;
                 break;
             case 'C':
                 numromano[i] = C;
@@ -48,12 +45,24 @@ int main() {
                 numromano[i] = M;
                 break;
         }
-        printf("%d\n", numromano[i]);
     }
-    
-    for (int i = 0; i < strlen(letraromana); i++){
-        printf("%c\n", numromano[i]);
-    }
+
    
-    
+    for (int i = strlen(letraromana) - 1; i >= 0; i--) {
+        int aux = numromano[i];
+
+      
+        if (aux < anterior) {
+            soma -= aux;
+        } else {
+            soma += aux;
+        }
+
+       
+        anterior = aux;
+    }
+
+    printf("O valor inteiro é: %d\n", soma);
+
+    return 0;
 }
