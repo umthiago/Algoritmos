@@ -1,36 +1,33 @@
 #include <stdio.h>
 #include <string.h>
 
-struct Evento {
-  int evento;
-  char horario[20]; 
-  char data[20];
-  char compromisso[100];
+struct Aluno {
+  char nome[20]; 
+  int idade;
+  char endereco[30];
 };
 
 int main() { 
-    struct Evento eventos [5];
+    struct Aluno alunos [5];
     for (int i = 0; i < 5; i++){
-      printf("\nEvento %d: \n", i + 1);
+      printf("\nAluno %d: \n", i + 1);
 
-      printf("Digite o Horário do compromisso %d: ", i + 1);
-      fgets(eventos[i].horario, sizeof(eventos[i].horario), stdin);
-      eventos[i].horario [strcspn (eventos[i].horario, "\n")] = 0; // Remove o '\n' do final
+      printf("Digite o nome do aluno: ");
+      fgets(alunos[i].nome, sizeof(alunos[i].nome), stdin);
+      alunos[i].nome [strcspn(alunos[i].nome, "\n")] = 0; // Remove o '\n' do final
 
-      printf("Digite a Data %d: ", i + 1);
-      fgets(eventos[i].data, sizeof(eventos[i].data), stdin);
-      eventos[i].data[strcspn(eventos[i].data, "\n")] = 0; // Remove o '\n' do final
+      printf("Digite a idade do aluno: ");
+      scanf("%d",&alunos[i].idade);
 
-      printf("Descreva o compromisso %d: ", i + 1);
-      fgets(eventos[i].compromisso, sizeof(eventos[i].compromisso), stdin);
-      eventos[i].compromisso [strcspn (eventos[i].compromisso, "\n")] = 0; // Remove o '\n' 
+      printf("Digite o endereco: ");
+      fgets(alunos[i].endereco, sizeof(alunos[i].endereco), stdin);
+      alunos[i].endereco [strcspn (alunos[i].endereco, "\n")] = 0; // Remove o '\n' 
     }
 
-  printf("\nEventos salvos na Agenda:\n");
+  printf("\nAlunos salvos na Agenda:\n");
   for (int i = 0; i < 5; i++){
-    printf("\nEvento %d:\n", i + 1);
-    printf("Horário: %s\n", eventos[i].horario);
-    printf("Data: %s\n", eventos[i].data);
-    printf("Compromisso: %s\n", eventos[i].compromisso);
+    printf("Aluno: %s\n", alunos[i].nome);
+    printf("Idade: %d\n", alunos[i].idade);
+    printf("Endereço: %s\n", alunos[i].endereco);
   }
 }
