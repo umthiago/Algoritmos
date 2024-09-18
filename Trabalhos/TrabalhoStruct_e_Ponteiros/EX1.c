@@ -2,7 +2,6 @@
 #include <string.h>
 
 struct Evento {
-  int evento;
   char horario[20]; 
   char data[20];
   char compromisso[100];
