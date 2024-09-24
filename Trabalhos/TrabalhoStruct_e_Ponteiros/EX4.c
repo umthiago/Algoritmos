@@ -7,38 +7,38 @@ struct dados{
 };
 
 int main(){
-    
+
     double maiornotaprova1 = 0;
     int aux, aux1, aux2;
     double media, maiormedia = 0, menormedia = 10;
-    
+
 
     struct dados aluno[5];
 
-    for(int i = 0; i < 2; i++){
+    for(int i = 0; i < 5; i++){
         printf("\nNome: ");
         scanf("%[^\n]", aluno[i].nome);
         getchar();
-        
+
         printf("Número de matrícula: ");
         scanf("%d", &aluno[i].matricula);
         getchar();
-        
+
         printf("Nota da Primeira Prova: ");
         scanf("%lf", &aluno[i].nota1);
         getchar();
-        
+
         printf("Nota da Segunda Prova: ");
         scanf("%lf", &aluno[i].nota2);
         getchar();
-        
+
         printf("Nota da Terceira Prova: ");
         scanf("%lf", &aluno[i].nota3);
         getchar();
     }
 
-    
-    
+
+
     for(int i = 0; i < 5; i++){
         if(aluno[i].nota1 > maiornotaprova1){
             maiornotaprova1  = aluno[i].nota1;
@@ -47,7 +47,7 @@ int main(){
     }
     printf("\n");
 
-    
+
     for(int i = 0; i < 5; i++){
         media = (aluno[i].nota1 + aluno[i].nota2 + aluno[i].nota3) / 3;
         if(media >= 6){
