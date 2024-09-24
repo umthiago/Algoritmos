@@ -1,34 +1,15 @@
 #include <stdio.h>
 
-struct dados{
-    char endereco[40];
-    int idade;
-    char nome[40];
-};
-
 int main(){
-    struct dados alunos[3];
 
-    for(int i = 0; i < 3; i++){
-        printf("\nNome: ");
-        scanf("%[^\n]", alunos[i].nome);
-        getchar();
-        
-        printf("\nIdade: ");
-        scanf("%d", &alunos[i].idade);
-        getchar();
-        
-        printf("\nEndereco: ");
-        scanf("%[^\n]", alunos[i].endereco);
-        getchar();
-    }
+    double vetor[10] = { 95.4, 43.8, 17.1, 11.4, 51.2, 22.7, 52.4, 77.6, 16.7, 33.8};
+    double *ponteiro;
     
-    printf("\n- Os dados armazenados -\n");
-   
-    for(int i = 0; i < 3; i++){
-        printf("Nome: %s\n", alunos[i].nome);
-        printf("Idade: %d\n", alunos[i].idade);
-        printf("Endereco: %s\n", alunos[i].endereco);
+    for(int i = 0; i < 10; i++){
+        ponteiro = &vetor[i];
+        printf("Posicao %d: endereco %p\n", i , (ponteiro ));
+        
+
     }
 
     return 0;
