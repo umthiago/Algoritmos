@@ -14,7 +14,7 @@ int main(){
     for(int i = 0; i < 5; i++){
         vetor[i] = vetor[i] *2;
         ponteiro = &vetor[i];
-        printf("Endereco com o dobro do valor %p: \n", ponteiro );
+        printf("Endereco com o dobro do valor: %p \n", ponteiro );
     }
 
     return 0;
