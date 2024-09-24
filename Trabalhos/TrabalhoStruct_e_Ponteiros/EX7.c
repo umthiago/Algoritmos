@@ -1,7 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int var1 = 1, var2 = 2;
+    int var1 = 0, var2 = 0;
+
+    printf("Digite o primeiro inteiro: ");
+    scanf("%d", &var1);
+
+    printf("Digite o segundo inteiro: ");
+    scanf("%d", &var2);
     
     int *pont1 = &var1; 
     int *pont2 = &var2; 
