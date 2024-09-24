@@ -1,33 +1,35 @@
 #include <stdio.h>
-#include <string.h>
 
-struct Aluno {
-  char nome[20]; 
-  int idade;
-  char endereco[30];
+struct dados{
+    char endereco[40];
+    int idade;
+    char nome[40];
 };
 
-int main() { 
-    struct Aluno alunos [5];
-    for (int i = 0; i < 5; i++){
-      printf("\nAluno %d: \n", i + 1);
+int main(){
+    struct dados alunos[3];
 
-      printf("Digite o nome do aluno: ");
-      fgets(alunos[i].nome, sizeof(alunos[i].nome), stdin);
-      alunos[i].nome [strcspn(alunos[i].nome, "\n")] = 0; // Remove o '\n' do final
-
-      printf("Digite a idade do aluno: ");
-      scanf("%d",&alunos[i].idade);
-
-      printf("Digite o endereco: ");
-      fgets(alunos[i].endereco, sizeof(alunos[i].endereco), stdin);
-      alunos[i].endereco [strcspn (alunos[i].endereco, "\n")] = 0; // Remove o '\n' 
+    for(int i = 0; i < 3; i++){
+        printf("\nNome: ");
+        scanf("%[^\n]", alunos[i].nome);
+        getchar();
+        
+        printf("\nIdade: ");
+        scanf("%d", &alunos[i].idade);
+        getchar();
+        
+        printf("\nEndereco: ");
+        scanf("%[^\n]", alunos[i].endereco);
+        getchar();
+    }
+    
+    printf("\n- Os dados armazenados -\n");
+   
+    for(int i = 0; i < 3; i++){
+        printf("Nome: %s\n", alunos[i].nome);
+        printf("Idade: %d\n", alunos[i].idade);
+        printf("Endereco: %s\n", alunos[i].endereco);
     }
 
-  printf("\nAlunos salvos na Agenda:\n");
-  for (int i = 0; i < 5; i++){
-    printf("Aluno: %s\n", alunos[i].nome);
-    printf("Idade: %d\n", alunos[i].idade);
-    printf("Endereço: %s\n", alunos[i].endereco);
-  }
+    return 0;
 }
