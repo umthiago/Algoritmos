@@ -1,34 +1,32 @@
 #include <stdio.h>
 
-struct dados{
-    char endereco[40];
-    int idade;
+struct aluno{
     char nome[40];
+    int matricula;
+    char curso[40];
 };
 
 int main(){
-    struct dados alunos[3];
+    struct aluno alunos[5];
 
-    for(int i = 0; i < 3; i++){
-        printf("\nNome: ");
+    for(int i = 0; i < 5; i++){
+        printf("Nome: ");
         scanf("%[^\n]", alunos[i].nome);
         getchar();
         
-        printf("\nIdade: ");
-        scanf("%d", &alunos[i].idade);
+        printf("Número de matrícula: ");
+        scanf("%d", &alunos[i].matricula);
         getchar();
         
-        printf("\nEndereco: ");
-        scanf("%[^\n]", alunos[i].endereco);
+        printf("Curso: ");
+        scanf("%[^\n]", alunos[i].curso);
         getchar();
     }
-    
-    printf("\n- Os dados armazenados -\n");
-   
-    for(int i = 0; i < 3; i++){
+    printf("\nDados dos alunos:\n");
+    for(int i = 0; i < 5; i++){
         printf("Nome: %s\n", alunos[i].nome);
-        printf("Idade: %d\n", alunos[i].idade);
-        printf("Endereco: %s\n", alunos[i].endereco);
+        printf("Idade: %d\n", alunos[i].matricula);
+        printf("Endereco: %s\n", alunos[i].curso);
     }
 
     return 0;
