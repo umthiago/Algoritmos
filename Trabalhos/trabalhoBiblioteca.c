@@ -7,7 +7,6 @@
 */
 #include <stdio.h>
 #include <float.h>
-
 //Mostra o Valor Maxímo e mínimo de um float
 void MaxMinFloat(){
     printf("VALORES MAX E MIN\n");
@@ -46,7 +45,7 @@ void flt_epsilon(){
     printf("A menor diferença positiva entre 1 e próximo número representável é: \n",FLT_EPSILON);
     printf("\n");
 }
-//Número de dígitos decimais de precisão para
+//Número de dígitos decimais que podem ser representados com precisão para Float
 void flt_dig(){
     printf("Precisão do float: %d dígitos\n ",FLT_DIG);
     printf("Precisão do Double: %d dígitos\n ",DBL_DIG);
