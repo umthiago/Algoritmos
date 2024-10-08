@@ -28,52 +28,50 @@ void flt_round(){
     int a = FLT_ROUNDS;
     printf("MODO DE ARREDONDAMENTO PARA VALORES FLOAT: %d\n", a);
 }
-
-
+//Informa a base do expoente, sendo 2 (binário), 10 (decimal) ou 16 (hexadecimal).//
 void flt_radix(){
     int radix = FLT_RADIX;
+    printf("BASE DE REPRESENTAÇÃO %d\n", radix);
     printf("\n");
-    printf("The base (radix) of the exponent representation: %d\n", radix);
-    //Informa a base do expoente, sendo 2 (binário), 10 (decimal) ou 16 (hexadecimal).//
 }
-
+//Informam o dígito menos significativo representável.
+//(precisão relativa da unidade):
 void flt_epsilon(){
-    float epsilon = FLT_EPSILON;
+    printf("A menor diferença positiva entre 1 e próximo número representável é: \n",FLT_EPSILON);
     printf("\n");
-    printf("The smallest positive difference between 1 and the next representable number: %f\n", epsilon);
-    //Informam o dígito menos significativo representável.//
+}
+//Número de dígitos decimais de precisão para
+void flt_dig(){
+    printf("Precisão do float: %d dígitos\n ",FLT_DIG);
+    printf("Precisão do Double: %d dígitos\n ",DBL_DIG);
+    printf("Precisão do Long Double: %d dígitos\n ",LDBL_DIG);
+    printf("\n");
 }
 
-void flt_mant_dig(){
-    
-    printf("TESTE: %d \n ",FLT_DIG);
-    //Informam o número de dígitos do número na base FLT_RADIX.//
-}
-
+//Informam o maior valor inteiro para um expoente na base decimal.//
 void flt_max_10_exp(){
+    
+    printf("O maximo valor de expoente na base 10 para representação em float é: %d\n", FLT_MAX_10_EXP);
+    printf("O maximo valor de expoente na base 10 para representação em double é: %d\n", DBL_MAX_10_EXP);
     printf("\n");
-    printf("The maximum value of 10-exponent for float: %d\n", FLT_MAX_10_EXP);
-    //Informam o maior valor inteiro para um expoente na base decimal.//
+    
 }
 
+ //"Informam o maior valor inteiro de um expoente para um float ."//
 void flt_max_exp(){
+    printf("O maximo valor inteiro para um expoente de um float é: %d\n", FLT_MAX_EXP);
+    printf("O maximo valor inteiro para um expoente de um Double é: %d\n", DBL_MAX_EXP);
     printf("\n");
-    printf("The maximum value of 10-exponent for float: %d\n", FLT_MAX_EXP);
-    //"Informam o maior valor inteiro para um expoente na base FLT_RADIX."//
 }
-
-
 
 int main () {
-    
+    //Chamando as funções
     MaxMinFloat();
     floatMant();
     flt_round();
     flt_radix();
     flt_epsilon();
-    flt_mant_dig();
+    flt_dig();
     flt_max_10_exp();
     flt_max_exp();
-
-   
 }
