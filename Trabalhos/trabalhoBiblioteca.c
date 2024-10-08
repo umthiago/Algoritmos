@@ -1,6 +1,12 @@
+/*
+@authors: Pedro Miotto Mujica, Thiago Oliveira Dupim
+@description: Usage of the float.h library in C using functions to show thier usage;
+@date: 12/05/2023
+@license: MIT License
+
+*/
 #include <stdio.h>
 #include <float.h>
-
 
 //Mostra o Valor Maxímo e mínimo de um float
 void MaxMinFloat(){
