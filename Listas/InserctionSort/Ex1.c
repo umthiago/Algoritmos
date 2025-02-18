@@ -1,0 +1,29 @@
+// Ordenação Crescente: Implemente o algoritmo Insertion Sort para ordenar um vetor de inteiros em ordem crescente.
+#include "stdio.h"
+
+void insertionSort(int vetor[], int n){ 
+    int i, key, j; 
+    for(i = 1; i < n; i++){ 
+        key = vetor[i]; 
+        j = i-1; 
+        while(j >= 0 && vetor[j] > key){ 
+            vetor[j+1] = vetor[j]; 
+            j--; 
+        } 
+        vetor[j+1] = key; 
+    } 
+}
+
+int main(void) {
+  int vetor[] = {5,4,3,2,1};
+  int n = sizeof(vetor)/sizeof(vetor[0]);
+  insertionSort(vetor, n);
+  for(int i = 0; i < n; i++){
+    printf("%d ", vetor[i]);
+    
+  }
+  
+  return 0;
+
+}
+ 
